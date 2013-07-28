@@ -16,8 +16,7 @@ module.exports = function (grunt) {
 						' * @license <%= pkg.license %>' + ' */'
 		},
 		swatch: {
-			amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, flatly:{}, journal:{}, readable:{},
-			simplex:{}, slate:{}, spacelab:{}, spruce:{}, superhero:{}, united:{}
+			flatly:{}
 		},
 		clean: {
 			build: {
@@ -106,7 +105,7 @@ module.exports = function (grunt) {
 		var t = this.target;
 		grunt.task.run('build:'+t, 'build-responsive:'+t);
 	});
-	
+
 	grunt.registerTask('default', 'build a theme, both not responsive and responsive', function() {
 		grunt.task.run('swatch');
 	});

@@ -59,6 +59,8 @@ p {
 	.brand {
 
 		text-shadow: none;
+		padding-top: 11px;
+		padding-bottom: 11px;
 
 		&:hover {
 			color: @linkColorHover;
@@ -106,7 +108,7 @@ p {
 			line-height: normal;
 			color: @textColor;
 
-			&:focus {		
+			&:focus {
 				padding: 4px 14px;
 				color: @textColor;
 			}
@@ -552,47 +554,106 @@ legend {
 	text-shadow: none;
 }
 
-// MEDIA QUERIES
+// CUSTOM STYLES
 // --------------------------------------------------
 
-@media (max-width: 767px) {
-	
-	div.subnav {
+.carousel{
+	margin-top: 85px;
+	padding-top: 0;
+	.image{
 
-		.nav > li:first-child > a,
-		.nav > li + li > a {
-			border-color: transparent;
-
-			&:hover {
-				background-color: darken(@grayLighter, 10%);
-			}
-		}
-		
-		.nav > li:last-child > a {
-			border-radius: 0 0 4px 4px;
-		}
 	}
-
-	.input-append,
-	.input-prepend {
-
-		.add-on,.btn {
-			padding: 5px;
+	.info{
+		position: absolute;
+		top: 11px;
+		left: 30px;
+		right: 0;
+		bottom: 0;
+		color: @white;
+		h1{
+			font-size: 24px;
+			font-weight: normal;
+			line-height: 1.2;
+		}
+		h2{
+			font-size: 14px;
+			font-weight: normal;
+			width: 450px;
+			line-height: 1.2;
+			padding-top: 15px;
+		}
+		.buttons{
+			margin-top: 22px;
 		}
 	}
 }
 
-@media (max-width: 979px) {
-
-	.navbar {
-
-		.nav-collapse .nav > li > a {
-			color: @white;
-
-			&:hover {
-				background-color: @green;
+.profiles{
+	h3{
+		font-size: 18px;
+		font-weight: normal;
+	}
+	.span4{
+		.box-shadow(#aaa 0 1px 2px 1px);
+		.border-radius(4px);
+		background: @white;
+		overflow: hidden;
+		.image{
+			img{
+				// .border-top-left-radius(4px);
+				// .border-top-right-radius(4px);
 			}
 		}
+		.purpose{
+			margin: 10px 20px 0;
+			.text{
+				text-align: center;
+				padding: 1px 0 14px;
+			}
+			.progress{
 
+			}
+		}
+		.description{
+			margin: 10px 20px 0;
+
+		}
+		.calltoaction{
+			margin: 10px 20px 20px;
+			.btn{
+				display: block;
+			}
+		}
+	}
+	.text-right{
+		padding: 10px 0 0;
+	}
+}
+
+.infoblock{
+	hr{
+		margin: 20px 0;
+		padding: 0;
+		height: 1px;
+		width: 100%;
+		background: @blueDark;
+	}
+	.image{
+		text-align: center;
+	}
+	h2{
+		font-size: 18px;
+		font-weight: normal;
+		text-align: center;
+	}
+}
+
+footer{
+	background: #dfdbcc;
+	.container{
+		padding-top: 20px;
+	}
+	.links{
+		padding-bottom: 10px;
 	}
 }

@@ -6,6 +6,10 @@
 // Global values
 // --------------------------------------------------
 
+// Custom colors
+@colorBackground: #f0ece1;
+@colorRed: #f0584c;
+
 // Grays
 // -------------------------
 @black:                 #000;
@@ -22,7 +26,7 @@
 @blue:                  #3498DB;
 @blueDark:              #2C3E50;
 @green:                 #18BC9C;
-@red:                   #E74C3C;
+@red:                   @colorRed;
 @yellow:                #e6bb0d;
 @orange:                #F39C12;
 @pink:                  #ff6699;
@@ -31,19 +35,19 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
+@bodyBackground:        @colorBackground;
 @textColor:             @blueDark;
 
 
 // Links
 // -------------------------
-@linkColor:             #1ABC9C;
+@linkColor:             @red;
 @linkColorHover:        lighten(@linkColor, 5%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "Oxygen", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
@@ -100,7 +104,7 @@
 @btnWarningBackgroundHighlight:     lighten(@btnWarningBackground, 10%);
 
 @btnDangerBackground:               @red;
-@btnDangerBackgroundHighlight:      lighten(@btnDangerBackground, 10%);
+@btnDangerBackgroundHighlight:      @red;
 
 @btnInverseBackground:              @grayDarker;
 @btnInverseBackgroundHighlight:     lighten(@btnInverseBackground, 10%);
@@ -171,7 +175,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  @grayLighter;
+@wellBackground:                  #dfdbcc;
 
 
 // Navbar
@@ -179,15 +183,15 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    50px;
-@navbarBackgroundHighlight:       @textColor;
-@navbarBackground:                @textColor;
+@navbarHeight:                    58px;
+@navbarBackgroundHighlight:       @colorRed;
+@navbarBackground:                @colorRed;
 @navbarBorder:                    darken(@navbarBackground, 5%);
 
 @navbarText:                      @white;
 @navbarLinkColor:                 @white;
-@navbarLinkColorHover:            @linkColor;
-@navbarLinkColorActive:           @linkColor;
+@navbarLinkColorHover:            @colorBackground;
+@navbarLinkColorActive:           @colorBackground;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
@@ -271,8 +275,8 @@
 // Default 940px grid
 // -------------------------
 @gridColumns:             12;
-@gridColumnWidth:         60px;
-@gridGutterWidth:         20px;
+@gridColumnWidth:         56px;
+@gridGutterWidth:         15px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // 1200px min
